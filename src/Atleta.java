@@ -4,13 +4,15 @@ import java.util.Random;
 public class Atleta implements Runnable {
     int numero;
     String nome;
+    Giudice giudice;
     double tempo = (double)0.0F;
     double metri = (double)0.0F;
     final double LUNGHEZZAGARA = (double)50.0F;
 
 
-    public Atleta(int pNumero, String pNome) {
+    public Atleta(int pNumero, String pNome, Giudice pgiudice) {
         this.numero = pNumero;
+        this.giudice= pgiudice;
         this.nome = pNome;
     }
 
@@ -34,5 +36,6 @@ public class Atleta implements Runnable {
 
 
         System.out.println(this.nome + " è al Traguardo");
+        giudice.fineGara(this);
     }
 }

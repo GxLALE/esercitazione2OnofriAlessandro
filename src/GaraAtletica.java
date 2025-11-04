@@ -1,8 +1,11 @@
-public class Main {
+public class GaraAtletica {
     public static void main(String[] args) {
         System.out.println("Gara Atletica");
-        Atleta a1 = new Atleta(67, "Federico");
-        Atleta a2 = new Atleta(68, "Alessandro");
+        Giudice giudice= new Giudice();
+
+
+        Atleta a1 = new Atleta(67, "Federico",giudice);
+        Atleta a2 = new Atleta(68, "Alessandro",giudice);
         Thread ta2 = new Thread(a2);
         ta2.setPriority(10);
         Thread ta1 = new Thread(a1);
