@@ -36,6 +36,6 @@ public class Atleta implements Runnable {
 
 
         System.out.println(this.nome + " è al Traguardo");
-        giudice.fineGara(this);
+        giudice.traguardo(this);
     }
 }

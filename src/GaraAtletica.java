@@ -6,9 +6,8 @@ public class GaraAtletica {
 
         Atleta a1 = new Atleta(67, "Federico",giudice);
         Atleta a2 = new Atleta(68, "Alessandro",giudice);
-        Thread ta2 = new Thread(a2);
-        ta2.setPriority(10);
         Thread ta1 = new Thread(a1);
+        Thread ta2 = new Thread(a2);
 
 
         for(int i = 3; i > 0; --i) {
@@ -27,5 +26,8 @@ public class GaraAtletica {
 
 
         ta2.start();
+
+        giudice.podio();
+
     }
 }
